@@ -1,9 +1,13 @@
+
+// Requirements to run file
+
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const generateMD = require('./utils/generateReadme');
+const generateMd = require('./utils/generateReadme');
 const writeFileAsync = util.promisify(fs.writeFile);
 
+// User prompts to populate ReadME file
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -58,7 +62,7 @@ const promptUser = () => {
         },
         {
             type: "input",
-            name: "username",
+            name: "Github",
             message: "Please enter your GitHub username: "
         },
         {
@@ -73,4 +77,26 @@ const promptUser = () => {
         }
     ]);
 };
-promptUser()
+
+async function init() {
+    try {
+        // Ask user questions and generate responses
+        const answers = await promptUser();
+        const generateContent = generateMd(answers);
+        // Write new README.md to dist directory
+        await writeFileAsync('./dist/README.md', generateContent);
+        console.log('✔️  Successfully wrote to README.md');
+    }   catch(err) {
+        console.log(err);
+    }
+  }
+  
+  init();  
+
+// const init = () => {
+//     promptUser()
+//     .then((answers) => writeFileAsync('README.md', (answers)))
+//     .then(() => console.log('Great Success!'))
+//     .catch((err) => console.error(err));
+// }
+// init();
