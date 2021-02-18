@@ -2,42 +2,45 @@
 
 function generateMd(answers) {
     return ` 
-    # ${answers.projectTitle}
+# ${answers.projectTitle}
+![badge](https://img.shields.io/badge/license-${answers.license}-brightblue)<br />
 
-    ## Description
+## Description
     ${answers.description}
 
 
-    ## Table of Contents 
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
-    - [Contact](#contact)
+## Table of Contents 
+* [Description](#Description)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Questions](#Questions)
+* [Contact](#Contact)
 
 
-    ## Installation
+## [Installation](#Installation)
     ${answers.installation}
 
 
-    ## License 
+## [License](#License)
+![badge](https://img.shields.io/badge/license-${answers.license}-brightblue)
     This application is covered by the ${answers.license} license.
 
-    ## Contributors 
+## [Contributing](#Contributing)
     ${answers.contributing}
 
-    ## Tests 
+## [Tests](#Tests)
     ${answers.tests}
 
-    ## Questions 
+## [Questions](#Questions)
     ${answers.questions}
 
-    ## Contact
-    ${answers.email}
-    ${answers.linkedin}
+## [Contact](#Contact)
+[${answers.github}](https://github.com/${answers.github})
+${answers.linkedin}
+${answers.email}(http)
     
 
     `;
