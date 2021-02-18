@@ -3,46 +3,46 @@
 function generateMd(answers) {
     return ` 
 # ${answers.projectTitle}
-![badge](https://img.shields.io/badge/license-${answers.license}-brightblue)<br />
-
-## Description
-    ${answers.description}
-
+![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)<br />
 
 ## Table of Contents 
 * [Description](#Description)
 * [Installation](#Installation)
 * [Usage](#Usage)
-* [License](#License)
+* [Technology](#Technology)
 * [Contributing](#Contributing)
 * [Tests](#Tests)
 * [Questions](#Questions)
-* [Contact](#Contact)
+* [License](#License)
+
+
+## Description
+    ${answers.description}
 
 
 ## [Installation](#Installation)
     ${answers.installation}
 
+## [Usage](#Usage)
+    ${answers.usage}
 
-## [License](#License)
-![badge](https://img.shields.io/badge/license-${answers.license}-brightblue)
-    This application is covered by the ${answers.license} license.
-
-## [Contributing](#Contributing)
+## [Technology](#Technology)
+    ${answers.technology}    
+    
+ ## [Contributing](#Contributing)
     ${answers.contributing}
-
+    
 ## [Tests](#Tests)
     ${answers.tests}
-
-## [Questions](#Questions)
-    ${answers.questions}
-
-## [Contact](#Contact)
-[${answers.github}](https://github.com/${answers.github})
-${answers.linkedin}
-${answers.email}(http)
     
-
+## [Contact for Questions](#Questions)
+    * [${answers.github}](https://github.com/${answers.github})
+    * [LinkedIn](${answers.linkedin})
+    * [${answers.email}](mailto:${answers.email})
+    
+## [License](#License)
+![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
+        This application is covered by the ${answers.license} license.
     `;
 }
 
