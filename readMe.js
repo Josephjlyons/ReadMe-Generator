@@ -62,7 +62,7 @@ const promptUser = () => {
         },
         {
             type: "input",
-            name: "Github",
+            name: "github",
             message: "Please enter your GitHub username: "
         },
         {
