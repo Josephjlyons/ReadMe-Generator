@@ -34,7 +34,7 @@ const promptUser = () => {
         {
             type: "list",
             name: "license",
-            message: "Chose the appropriate license for this project: ",
+            message: "Choose the appropriate license for this project: ",
             choices: [
                 "Apache",
                 "Academic",
@@ -67,7 +67,7 @@ const promptUser = () => {
         },
         {
             type: "input",
-            name: "LinkedIn",
+            name: "linkedin",
             message: "Please enter your LinkedIn URL: "
         },
         {
@@ -82,9 +82,9 @@ async function init() {
     try {
         // Ask user questions and generate responses
         const answers = await promptUser();
-        const generateContent = generateMd(answers);
+        const populateRM = generateMd(answers);
         // Write new README.md to dist directory
-        await writeFileAsync('./dist/README.md', generateContent);
+        await writeFileAsync('./dist/README.md', populateRM);
         console.log('✔️  Successfully wrote to README.md');
     }   catch(err) {
         console.log(err);
@@ -92,11 +92,3 @@ async function init() {
   }
   
   init();  
-
-// const init = () => {
-//     promptUser()
-//     .then((answers) => writeFileAsync('README.md', (answers)))
-//     .then(() => console.log('Great Success!'))
-//     .catch((err) => console.error(err));
-// }
-// init();
