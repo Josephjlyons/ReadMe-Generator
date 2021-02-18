@@ -32,19 +32,11 @@ const promptUser = () => {
             message: "What is this project usage for?"
         },
         {
-            type: "list",
-            name: "license",
-            message: "Choose the appropriate license for this project: ",
-            choices: [
-                "Apache",
-                "Academic",
-                "GNU",
-                "ISC",
-                "MIT",
-                "Mozilla",
-                "Open"
-            ]
+            type: "input",
+            name: "technology",
+            message: "Technologies used?"
         },
+
         {
             type: "input",
             name: "contributing",
@@ -54,11 +46,6 @@ const promptUser = () => {
             type: "input",
             name: "tests",
             message: "Is there a test included?"
-        },
-        {
-            type: "input",
-            name: "questions",
-            message: "What do I do if I have an issue? "
         },
         {
             type: "input",
@@ -74,9 +61,25 @@ const promptUser = () => {
             type: "input",
             name: "email",
             message: "Please enter your email: "
-        }
+        },      
+        {
+            type: "list",
+            name: "license",
+            message: "Choose the appropriate license for this project: ",
+            choices: [
+                "Apache",
+                "Academic",
+                "GNU",
+                "ISC",
+                "MIT",
+                "Mozilla",
+                "Open"
+            ]
+        },
     ]);
 };
+
+// Writes Files to file & console.log success or failure (err)
 
 async function init() {
     try {
@@ -85,7 +88,7 @@ async function init() {
         const populateRM = generateMd(answers);
         // Write new README.md to dist directory
         await writeFileAsync('./dist/README.md', populateRM);
-        console.log('✔️  Successfully wrote to README.md');
+        console.log('✔️  Great Success! Wrote to README.md');
     }   catch(err) {
         console.log(err);
     }
