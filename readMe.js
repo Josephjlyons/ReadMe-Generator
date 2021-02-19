@@ -45,7 +45,7 @@ const promptUser = () => {
         {
             type: "input",
             name: "tests",
-            message: "Is there a test included?"
+            message: "Is there a test included? If none hit enter to leave blank."
         },
         {
             type: "input",
