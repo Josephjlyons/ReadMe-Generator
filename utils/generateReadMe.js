@@ -12,7 +12,7 @@ function generateMd(answers) {
 * [Technology](#Technology)
 * [Contributing](#Contributing)
 * [Tests](#Tests)
-* [Questions](#Questions)
+* [Questions/Contact](#Questions)
 * [License](#License)
 
 
@@ -29,16 +29,16 @@ function generateMd(answers) {
 ## [Technology](#Technology)
     ${answers.technology}    
     
- ## [Contributing](#Contributing)
+## [Contributing](#Contributing)
     ${answers.contributing}
     
 ## [Tests](#Tests)
     ${answers.tests}
     
-## [Contact for Questions](#Questions)
-    * [${answers.github}](https://github.com/${answers.github})
-    * [LinkedIn](${answers.linkedin})
-    * [${answers.email}](mailto:${answers.email})
+## [Questions](#Questions)
+* [GitHub](https://github.com/${answers.github})
+* [LinkedIn](${answers.linkedin})
+* [Email](mailto:${answers.email})
     
 ## [License](#License)
 ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
