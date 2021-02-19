@@ -2,6 +2,8 @@
 
 ![projectimg](./assets/terminalImg.png)
 
+![Walkthrough Video](https://drive.google.com/file/d/124fej7KmHscg-c3xLRxAJuKGyul_qKx8/view?usp=sharing)
+
 ## Table of Contents 
 * [Purpose](#Purpose)
 
