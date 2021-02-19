@@ -40,7 +40,7 @@ const promptUser = () => {
         {
             type: "input",
             name: "contributing",
-            message: "Who are the contributors of this projects?"
+            message: "Who are the contributors of this projects? If its a solo project enter your name."
         },
         {
             type: "input",
